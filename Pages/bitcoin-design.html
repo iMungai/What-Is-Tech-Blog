@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>WhatIs? | Bitcoin Design</title>
+    <link rel="icon" href="../Imagery/13.jpg">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="../Pages/blog-page-temp.css">
+    <link rel="stylesheet" href="../Meta Files/bootstrap/css/bootstrap.css">
+    <script src="main.js"></script>
+    <style>
+        header{
+            background-image: url(../Imagery/9.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <nav>
+            <ul>
+                <li><a href="index.html" style="font-size: 24px; font-weight:bold; ">WhatIs?</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="#about-ethan">About</a></li>                
+            </ul>
+        </nav>
+        <header>
+            <div id="header">
+                <h1>WhatIs | Bitcoin Design</h1>
+                <h4>Published by <em>Ethan</em> on 4<sup>th</sup> February 2019</h4>
+            </div>
+        </header>
+        <div id="main">
+            <h2>Design</h2>
+            <h3>Blockchain</h3>
+            <p>The bitcoin blockchain is a public ledger that records bitcoin transactions. It is implemented as a chain of blocks, each block containing a hash of the previous block up to the genesis block of the chain. A network of communicating nodes running bitcoin software maintains the blockchain. Transactions of the form payer X sends Y bitcoins to payee Z are broadcast to this network using readily available software applications.</p>
+            <p>Network nodes can validate transactions, add them to their copy of the ledger, and then broadcast these ledger additions to other nodes. To achieve independent verification of the chain of ownership each network node stores its own copy of the blockchain. About every 10 minutes, a new group of accepted transactions, called a block, is created, added to the blockchain, and quickly published to all nodes, without requiring central oversight. This allows bitcoin software to determine when a particular bitcoin was spent, which is needed to prevent double-spending. A conventional ledger records the transfers of actual bills or promissory notes that exist apart from it, but the blockchain is the only place that bitcoins can be said to exist in the form of unspent outputs of transactions.</p>
+            <h3>Transactions</h3>
+            <p>Transactions are defined using a Forth-like scripting language. Transactions consist of one or more inputs and one or more outputs. When a user sends bitcoins, the user designates each address and the amount of bitcoin being sent to that address in an output. To prevent double spending, each input must refer to a previous unspent output in the blockchain. The use of multiple inputs corresponds to the use of multiple coins in a cash transaction. Since transactions can have multiple outputs, users can send bitcoins to multiple recipients in one transaction. As in a cash transaction, the sum of inputs (coins used to pay) can exceed the intended sum of payments. In such a case, an additional output is used, returning the change back to the payer. Any input satoshis not accounted for in the transaction outputs become the transaction fee.</p>
+            <h3>Units</h3>
+            <p>The unit of account of the bitcoin system is a bitcoin. Ticker symbols used to represent bitcoin are BTC and XBT. Its Unicode character is ₿. Small amounts of bitcoin used as alternative units are millibitcoin (mBTC), and satoshi (sat). Named in homage to bitcoin's creator, a satoshi is the smallest amount within bitcoin representing 0.00000001 bitcoins, one hundred millionth of a bitcoin. A millibitcoin equals 0.001 bitcoins, one thousandth of a bitcoin or 100,000 satoshis.</p>
+            <h3>Transaction Fees</h3>
+            <p>Though transaction fees are optional, miners can choose which transactions to process and prioritize those that pay higher fees. Miners may choose transactions based on the fee paid relative to their storage size, not the absolute amount of money paid as a fee. These fees are generally measured in satoshis per byte (sat/b). The size of transactions is dependent on the number of inputs used to create the transaction, and the number of outputs.</p>
+            <h3>Ownership</h3>
+            <p>In the blockchain, bitcoins are registered to bitcoin addresses. Creating a bitcoin address requires nothing more than picking a random valid private key and computing the corresponding bitcoin address. This computation can be done in a split second. But the reverse, computing the private key of a given bitcoin address, is mathematically unfeasible. Users can tell others or make public a bitcoin address without compromising its corresponding private key. Moreover, the number of valid private keys is so vast that it is extremely unlikely someone will compute a key-pair that is already in use and has funds. The vast number of valid private keys makes it unfeasible that brute force could be used to compromise a private key. To be able to spend their bitcoins, the owner must know the corresponding private key and digitally sign the transaction. The network verifies the signature using the public key.</p>
+            <p>If the private key is lost, the bitcoin network will not recognize any other evidence of ownership; the coins are then unusable, and effectively lost. For example, in 2013 one user claimed to have lost 7,500 bitcoins, worth $7.5 million at the time, when he accidentally discarded a hard drive containing his private key. A backup of his key(s) would have prevented this.</p>
+            <p>About 20% of all bitcoins are believed to be lost. They would have a market value of about $20 billion at July 2018 prices. Approximately one million bitcoins, valued at $7 billion in July 2018, have been stolen.</p>
+            <h3>Mining</h3>
+            <p>Mining is a record-keeping service done through the use of computer processing power. Miners keep the blockchain consistent, complete, and unalterable by repeatedly grouping newly broadcast transactions into a block, which is then broadcast to the network and verified by recipient nodes. Each block contains a SHA-256 cryptographic hash of the previous block, thus linking it to the previous block and giving the blockchain its name.</p>
+            <p>To be accepted by the rest of the network, a new block must contain a so-called proof-of-work (PoW). The system used is based on Adam Back's 1997 anti-spam scheme, Hashcash. The PoW requires miners to find a number called a nonce, such that when the block content is hashed along with the nonce, the result is numerically smaller than the network's difficulty target. This proof is easy for any node in the network to verify, but extremely time-consuming to generate, as for a secure cryptographic hash, miners must try many different nonce values (usually the sequence of tested values is the ascending natural numbers: 0, 1, 2, 3, ... before meeting the difficulty target.</p>
+            <p>Every 2,016 blocks (approximately 14 days at roughly 10 min per block), the difficulty target is adjusted based on the network's recent performance, with the aim of keeping the average time between new blocks at ten minutes. In this way the system automatically adapts to the total amount of mining power on the network. Between 1 March 2014 and 1 March 2015, the average number of nonces miners had to try before creating a new block increased from 16.4 quintillion to 200.5 quintillion.</p>
+            <p>The proof-of-work system, alongside the chaining of blocks, makes modifications of the blockchain extremely hard, as an attacker must modify all subsequent blocks in order for the modifications of one block to be accepted. As new blocks are mined all the time, the difficulty of modifying a block increases as time passes and the number of subsequent blocks (also called confirmations of the given block) increases.</p>
+            <h4>Pooled Mining</h4>
+            <p>Computing power is often bundled together or "pooled" to reduce variance in miner income. Individual mining rigs often have to wait for long periods to confirm a block of transactions and receive payment. In a pool, all participating miners get paid every time a participating server solves a block. This payment depends on the amount of work an individual miner contributed to help find that block.</p>
+            <h3>Supply</h3>
+            <p>The successful miner finding the new block is rewarded with newly created bitcoins and transaction fees. As of 9 July 2016, the reward amounted to 12.5 newly created bitcoins per block added to the blockchain. To claim the reward, a special transaction called a coinbase is included with the processed payments. All bitcoins in existence have been created in such coinbase transactions. The bitcoin protocol specifies that the reward for adding a block will be halved every 210,000 blocks (approximately every four years). Eventually, the reward will decrease to zero, and the limit of 21 million bitcoins[f] will be reached c. 2140; the record keeping will then be rewarded solely by transaction fees.</p>
+            <p>In other words, bitcoin's inventor Nakamoto set a monetary policy based on artificial scarcity at bitcoin's inception that there would only ever be 21 million bitcoins in total. Their numbers are being released roughly every ten minutes and the rate at which they are generated would drop by half every four years until all were in circulation.</p>
+            <h3>Wallets</h3>
+            <p>A wallet stores the information necessary to transact bitcoins. While wallets are often described as a place to hold or store bitcoins, due to the nature of the system, bitcoins are inseparable from the blockchain transaction ledger. A better way to describe a wallet is something that "stores the digital credentials for your bitcoin holdings" and allows one to access (and spend) them. Bitcoin uses public-key cryptography, in which two cryptographic keys, one public and one private, are generated.[89] At its most basic, a wallet is a collection of these keys.
+            </p>
+            <p>There are several modes which wallets can operate in. They have an inverse relationship with regards to trustlessness and computational requirements:</p>
+            <p>
+                1. Full clients verify transactions directly by downloading a full copy of the blockchain (over 150 GB As of January 2018). They are the most secure and reliable way of using the network, as trust in external parties is not required. Full clients check the validity of mined blocks, preventing them from transacting on a chain that breaks or alters network rules. Because of its size and complexity, downloading and verifying the entire blockchain is not suitable for all computing devices.
+            </p>
+            <p>
+                2. Lightweight clients consult full clients to send and receive transactions without requiring a local copy of the entire blockchain (see simplified payment verification – SPV). This makes lightweight clients much faster to set up and allows them to be used on low-power, low-bandwidth devices such as smartphones. When using a lightweight wallet, however, the user must trust the server to a certain degree, as it can report faulty values back to the user. Lightweight clients follow the longest blockchain and do not ensure it is valid, requiring trust in miners.
+            </p>
+            <p>Third-party internet services called online wallets offer similar functionality but may be easier to use. In this case, credentials to access funds are stored with the online wallet provider rather than on the user's hardware. As a result, the user must have complete trust in the wallet provider. A malicious provider or a breach in server security may cause entrusted bitcoins to be stolen. An example of such a security breach occurred with Mt. Gox in 2011. This has led to the often-repeated meme "Not your keys, not your bitcoin".</p>
+            <p>Physical wallets store the credentials necessary to spend bitcoins offline. One notable example was a novelty coin with these credentials printed on the reverse side. Paper wallets are simply paper printouts.</p>
+            <p>Another type of wallet called a hardware wallet keeps credentials offline while facilitating transactions.</p>
+            <h3>Implementations</h3>
+            <p>The first wallet program, simply named Bitcoin, and sometimes referred to as the Satoshi client, was released in 2009 by Satoshi Nakamoto as open-source code. In version 0.5 the client moved from the wxWidgets user interface toolkit to Qt, and the whole bundle was referred to as Bitcoin-Qt. After the release of version 0.9, the software bundle was renamed Bitcoin Core to distinguish itself from the underlying network.</p>
+            <h4>Forks</h4>
+            <p>Bitcoin Core is, perhaps, the best known implementation or client. Alternative clients (forks of Bitcoin Core) exist, such as Bitcoin XT, Bitcoin Unlimited, and Parity Bitcoin.</p>
+            <p>On 1 August 2017, a hard fork of bitcoin was created, known as Bitcoin Cash. Bitcoin Cash has a larger block size limit and had an identical blockchain at the time of fork. On 24 October 2017 another hard fork, Bitcoin Gold, was created. Bitcoin Gold changes the proof-of-work algorithm used in mining, as the developers felt that mining had become too specialized.</p>
+            <h3>Decentralization And Centralization</h3>
+            <h4>Decentralization</h4>
+            <p>Bitcoin does not have a central authority and the bitcoin network is decentralized:</p>
+            <p>
+                1. There is no central server, bitcoin network is peer-to-peer.
+            </p>
+            <p>
+                2. There is no central storage, bitcoin ledger is distributed.
+            </p>
+            <p>
+                3. The ledger is public, anybody can store it on their computer.
+            </p>
+            <p>
+                4. There is no single administrator, the ledger is maintained by a network of equally privileged miners.
+            </p>
+            <p>
+                5. Anybody can become a miner.
+            </p>
+            <p>
+                6. The additions to the ledger are maintained through competition. Until a new block is added to the ledger, it is not known which miner will create the block.
+            </p>
+            <p>
+                7. The issuance of bitcoins is decentralized. They are issued as a reward for the creation of a new block.
+            </p>
+            <p>
+                8. Anybody can create a new bitcoin address (a bitcoin counterpart of a bank account) without needing any approval.
+            </p>
+            <p>
+                9. Anybody can send a transaction to the network without needing any approval, the network merely confirms that the transaction is legitimate.
+            </p>
+            <h4>Trends Towards Centralization</h4>
+            <p>Researchers have pointed out at a "trend towards centralization". Although bitcoin can be sent directly to the bitcoin network, in practice intermediaries are widely used. Bitcoin miners join large mining pools to minimize the variance of their income. Because transactions on the network are confirmed by miners, decentralization of the network requires that no single miner or mining pool obtains 51% of the hashing power, which would allow them to double-spend coins, prevent certain transactions from being verified and prevent other miners from earning income. As of 2013 just six mining pools controlled 75% of overall bitcoin hashing power. In 2014 mining pool Ghash.io obtained 51% hashing power which raised significant controversies about the safety of the network. The pool has voluntarily capped their hashing power at 39.99% and requested other pools to act responsibly for the benefit of the whole network.</p>
+            <p>According to researchers, other parts of the ecosystem are also "controlled by a small set of entities", notably the maintenance of the official client software, online wallets and simplified payment verification (SPV) clients.</p>
+            <h3>Privacy</h3>
+            <p>Bitcoin is pseudonymous, meaning that funds are not tied to real-world entities but rather bitcoin addresses. Owners of bitcoin addresses are not explicitly identified, but all transactions on the blockchain are public. In addition, transactions can be linked to individuals and companies through "idioms of use" (e.g., transactions that spend coins from multiple inputs indicate that the inputs may have a common owner) and corroborating public transaction data with known information on owners of certain addresses. Additionally, bitcoin exchanges, where bitcoins are traded for traditional currencies, may be required by law to collect personal information.</p>
+            <p>To heighten financial privacy, a new bitcoin address can be generated for each transaction. For example, hierarchical deterministic wallets generate pseudorandom "rolling addresses" for every transaction from a single seed, while only requiring a single passphrase to be remembered to recover all corresponding private keys. Researchers at Stanford and Concordia universities have also shown that bitcoin exchanges and other entities can prove assets, liabilities, and solvency without revealing their addresses using zero-knowledge proofs. "Bulletproofs," a version of Confidential Transactions proposed by Greg Maxwell, have been tested by Professor Dan Boneh of Stanford. Other solutions such Merkelized Abstract Syntax Trees (MAST), pay-to-script-hash (P2SH) with MERKLE-BRANCH-VERIFY, and "Tail Call Execution Semantics", have also been proposed to support private smart contracts.</p>
+            <h3>Fungibility</h3>
+            <p>Wallets and similar software technically handle all bitcoins as equivalent, establishing the basic level of fungibility. Researchers have pointed out that the history of each bitcoin is registered and publicly available in the blockchain ledger, and that some users may refuse to accept bitcoins coming from controversial transactions, which would harm bitcoin's fungibility.</p>
+            <h3>Scalability</h3>
+            <p>The blocks in the blockchain were originally limited to 32 megabytes in size. The block size limit of one megabyte was introduced by Satoshi Nakamoto in 2010. Eventually the block size limit of one megabyte created problems for transaction processing, such as increasing transaction fees and delayed processing of transactions.</p>
+            <p>On 24 August 2017 (at block 481,824), Segregated Witness (SegWit) went live. Transactions contain some data which is only used to verify the transaction, and does not otherwise effect the movement of coins. SegWit introduced a new transaction format that moved this data into a new field in a backwards-compatible way. The segregated data, the so-called witness, is not sent to non-SegWit nodes and therefore does not form part of the blockchain as seen by legacy nodes. This lowers the size of the average transaction in such nodes' view, thereby increasing the block size without incurring the hard fork implied by other proposals for block size increases. Thus, per computer scientist Jochen Hoenicke, the actual block capacity depends on the ratio of SegWit transactions in the block, and on the ratio of signature data. Based on his estimate, if the ratio of SegWit transactions is 50%, the block capacity may be 1.25 megabytes. According to Hoenicke, if native SegWit addresses from Bitcoin Core version 0.16.0 are used, and SegWit adoption reaches 90% to 95%, a block size of up to 1.8 megabytes is possible.</p>
+        </div>
+        <hr>
+        <div id="suggestion">
+            <h3>Suggested Topics</h3>
+            <p>For more information on bitcoins, check out my continuation articles below.</p>
+            <h4><a href="bitcoin-introduction.html">WHATIS? | BITCOIN | Introduction</a></h4>
+            <h4><a href="bitcoin-design.html">WHATIS? | BITCOIN | Design</a></h4>
+            <h4><a href="bitcoin-ideology-and-economics.html">WHATIS? | BITCOIN | Ideology & Economics</a></h4>
+            <h4><a href="bitcoin-legal-status-tax-and-regulation.html">WHATIS? | BITCOIN | Legal Status, Tax & Regulation</a></h4>
+            <h4><a href="bitcoin-criticisim.html">WHATIS? | BITCOIN | Criticism</a></h4>
+        </div>
+        <hr>
+        <div id="about-ethan">
+            <h2>About Ethan</h2>
+            <img src="../Imagery/3.jpg" alt="" width="40%">
+            <h3>My name is Ethan and I'm the founder of WHATIS? Tech Blog. I did this so that tech enthusiasts like you and I could share the latest and trending tech topics as we build a community together.</h3>
+            <h3>Feel free to leave me a message on anything below and I will respond as soon as possible.</h3>
+            <br>
+            <h2>Contacts</h2>  
+            <br>          
+            <a href="">Facebook</a>
+            <a href="">Twitter</a>
+            <a href="">Linkedln</a>
+            <a href="">Gmail</a>        
+        </div>
+        <div id="message">
+            <h3>Leave A Message Below:</h3>
+            <form action="">
+                <textarea name="" id="" cols="30" rows="10" placeholder="Message:" required=""></textarea>
+                <br>
+                <input type="text" placeholder="Name:" required="">
+                <br>
+                <input type="email" placeholder="Email Address:" required="">
+                <br>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+        <footer>
+                <h5><span style="font-size: 22px;">WhatIs</span> | The Leading Tech Blog In The Region<br> All Rights Reserved 2019</h5>
+        </footer>
+    </div>
+</body>
+</html>

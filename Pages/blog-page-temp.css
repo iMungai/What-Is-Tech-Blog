@@ -1,0 +1,170 @@
+body{
+    margin: 0px;
+    padding: 0px;
+}
+/* navigation bar */
+ul{
+    background-color: black;    
+    padding: 8px 16px 8px 80px;
+    position: fixed;
+    width: 100%;
+    height: auto;
+    top: 0px;
+}
+nav li{
+    list-style-type: none;
+    display: inline;
+}
+nav a{
+    text-decoration: none;    
+    padding: 8px 16px 8px 0px;
+    height: auto;
+    color: white;
+    font-family: play;
+    font-size: 18px;
+}
+nav a:hover{
+    text-decoration: none;
+    color: orangered;
+}
+header{
+    padding: 128px 40px 128px 80px;
+}
+header h1{
+    font-family: play;
+    font-size: 48px;
+    color: white;
+}
+header h4{
+    font-family: play;
+    font-size: 24px;
+    color: white;
+}
+#header{
+    background-color: rgba(0, 0, 0, 0.8);
+}
+#main{
+    margin-left: 40px;
+    padding: 0px 40px 0px 40px;
+}
+#main h2{
+    font-family: play;
+    font-size: 36px;
+}
+#main p{
+    font-family: play;
+    font-size: 16px;
+}
+#main h3{
+    font-family: play;
+    font-size: 32px;
+}
+#main h4{
+    font-family: play;
+    font-size: 28px;
+}
+#suggestion{
+    text-align: left;
+    background-color: black;
+    padding: 24px 64px;
+    font-family: play;
+    width: 80%;
+    margin-left: 10%;
+}
+#suggestion h3{
+    font-size: 32px;
+    color: white;
+}
+#suggestion p{
+    font-family: play;
+    color: white;
+}
+#suggestion h4 a{
+    color: white;
+}
+#suggestion h4 a:hover{
+    text-decoration: none;
+    color: orangered;
+}
+#about-ethan{
+    padding: 52px 80px;
+}
+#about-ethan h2{
+    font-family: play;
+}
+#about-ethan img{
+    float: left;
+    padding-right: 80px;
+}
+#about-ethan h3{
+    font-family: play;
+    font-size: 24px;
+}
+#about-ethan a{
+    font-family: play;
+    border: 2px solid black;
+    padding: 8px 42px;
+    margin: 8px 16px 8px 0px;
+    color: white;
+    background-color: black;
+}
+#about-ethan a:hover{
+    text-decoration: none;
+    color: orangered;
+    border-bottom: 4px solid orangered;
+}
+#message{
+    clear: both;
+    text-align: center;
+    padding: 32px 0px;
+    background-color: black;
+}
+#message h3{
+    font-family: play;
+    font-size: 32px;
+    color: white;
+}
+#message textarea{
+    width: 50%;
+    font-family: play;
+    font-size: 20px;
+    color: black;
+    margin-bottom: 2px;
+}
+#message input{
+    width: 50%;
+    margin-bottom: 8px;
+    padding: 8px 4px;
+    font-family: play;
+    font-size: 18px;
+}
+#message button{
+    font-family: play;
+    font-weight: bold;
+    background-color: black;
+    border: 2px solid white;
+    padding: 8px 16px;
+    margin-top: 8px;
+    border-radius: 1px;
+    color: white;
+}
+#message button:hover{
+    font-family: play;
+    font-weight: bold;
+    background-color: white;
+    border: 2px solid white;
+    padding: 8px 16px;
+    border-radius: 1px;
+    color: black;
+}
+footer{
+    margin: 0px;
+    padding: 8px 16px;
+    text-align: center;
+    color: white;
+    background-color: black;
+}
+footer h5{
+    font-family: play;
+    font-size: 16px;
+}
